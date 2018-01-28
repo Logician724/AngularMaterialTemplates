@@ -5,3 +5,5 @@ app.controller('sidenavController',function($scope,$mdSidenav){
     $mdSidenav('nav-left').toggle();
   }
 });
+app.controller('registerController',function(){
+});

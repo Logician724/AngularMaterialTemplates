@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Angular Material Tempaltes</title>
+  <title>Angular Material Templates</title>
   <meta name="description" content="Material Design with Angular" />
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" />
@@ -26,12 +26,61 @@
       <h2 flex md-truncate>Angular Material Templates</h2>
     </div>
   </md-toolbar>
-  <div layout="row">
-    <md-sidenav class="md-sidenav-left" md-component-id="nav-left" md-is-locked-open="$mdMedia('gt-sm')" md-whiteframe="4">
+  <div layout="row" layout-fill>
+    <md-sidenav flex="20" layout="column" class="md-sidenav-left" md-component-id="nav-left" md-is-locked-open="$mdMedia('gt-sm')" md-whiteframe="5">
       <md-toolbar class="md-theme-indigo">
         <h1 class="md-toolbar-tools">Table Of Content</h1>
       </md-toolbar>
     </md-sidenav>
+    <div flex="80" layout="column">
+      <div layout-padding layout="column" layout-align-gt-xs="center center">
+        <div layout="column" ng-controller="registerController">
+          <form layout="column" name="register">
+            <md-input-container>
+              <label>User Name</label>
+              <input type="text" ng-model="$ctrl.user.username" />
+            </md-input-container>
+            <div layout-gt-xs="row">
+              <md-input-container>
+                <label>Email</label>
+                <input type="email" ng-model="$ctrl.user.email" />
+              </md-input-container>
+              <md-input-container>
+                <label>Date Of Birth</label>
+                <md-datepicker ng-model="$ctrl.user.dateBirth"></md-datepicker>
+              </md-input-container>
+            </div>
+            <div layout-gt-xs="row">
+              <md-input-container>
+                <label>First Name</label>
+                <input type="text" ng-model="$ctrl.user.firstName" />
+              </md-input-container>
+              <md-input-container>
+                <label>Last Name</label>
+                <input type="text" ng-model="$ctrl.user.lastName" />
+              </md-input-container>
+            </div>
+            <md-input-container>
+              <label>Address</label>
+              <input type="text" ng-model="$ctrl.user.address" />
+            </md-input-container>
+            <md-input-container>
+              <label>Address 2</label>
+              <input type="text" ng-model="$ctrl.user.addressRest" />
+            </md-input-container>
+            <md-input-container class="md-block">
+              <label>About</label>
+              <textarea ng-model="$ctrl.user.about" md-maxlength="280" rows="5" md-select-on-focus></textarea>
+            </md-input-container>
+            <md-checkbox ng-model="$ctrl.user.terms"><a href="#"><label>I accept all the terms of service.</label></a></md-checkbox>
+            <div layout-margin layout="row" layout-align="center">
+              <md-button class="md-raised md-primary">Register</md-button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
+
 </html>
