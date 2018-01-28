@@ -1,0 +1,27 @@
+{
+  "name": "angular-material-templates",
+  "version": "1.0.0",
+  "description": "Material design templates using angularJS material",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Logician724/AngularMaterialTemplates.git"
+  },
+  "keywords": [
+    "angularJS"
+  ],
+  "author": "Logician724",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Logician724/AngularMaterialTemplates/issues"
+  },
+  "homepage": "https://github.com/Logician724/AngularMaterialTemplates#readme",
+  "dependencies": {
+    "angular": "^1.6.7",
+    "angular-material": "^1.1.6",
+    "angular-route": "^1.6.8"
+  }
+}
