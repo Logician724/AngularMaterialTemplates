@@ -9,11 +9,17 @@
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" />
   <link rel="stylesheet" href="../node_modules/angular-material/angular-material.css" />
-  <script src="../node_modules/angular/angular.min.js"></script>
+  <script src="../node_modules/angular/angular.js"></script>
+  <script src="../node_modules/angular-route/angular-route.js"></script>
   <script src="../node_modules/angular-aria/angular-aria.min.js"></script>
   <script src="../node_modules/angular-animate/angular-animate.min.js"></script>
   <script src="../node_modules/angular-material/angular-material.js"></script>
   <script src="app.module.js"></script>
+  <script src="app.config.js"></script>
+  <script src="register-form/register-form.module.js"></script>
+  <script src="register-form/register-form.component.js"></script>
+  <script src="nav-list/nav-list.module.js"></script>
+  <script src="nav-list/nav-list.component.js"></script>
   <script src="app.js"></script>
 </head>
 
@@ -31,53 +37,10 @@
       <md-toolbar class="md-theme-indigo">
         <h1 class="md-toolbar-tools">Table Of Content</h1>
       </md-toolbar>
+      <nav-list></nav-list>
     </md-sidenav>
     <div flex="80" layout="column">
-      <div layout-padding layout="column" layout-align-gt-xs="center center">
-        <div layout="column" ng-controller="registerController">
-          <form layout="column" name="register">
-            <md-input-container>
-              <label>User Name</label>
-              <input type="text" ng-model="$ctrl.user.username" />
-            </md-input-container>
-            <div layout-gt-xs="row">
-              <md-input-container>
-                <label>Email</label>
-                <input type="email" ng-model="$ctrl.user.email" />
-              </md-input-container>
-              <md-input-container>
-                <label>Date Of Birth</label>
-                <md-datepicker ng-model="$ctrl.user.dateBirth"></md-datepicker>
-              </md-input-container>
-            </div>
-            <div layout-gt-xs="row">
-              <md-input-container>
-                <label>First Name</label>
-                <input type="text" ng-model="$ctrl.user.firstName" />
-              </md-input-container>
-              <md-input-container>
-                <label>Last Name</label>
-                <input type="text" ng-model="$ctrl.user.lastName" />
-              </md-input-container>
-            </div>
-            <md-input-container>
-              <label>Address</label>
-              <input type="text" ng-model="$ctrl.user.address" />
-            </md-input-container>
-            <md-input-container>
-              <label>Address 2</label>
-              <input type="text" ng-model="$ctrl.user.addressRest" />
-            </md-input-container>
-            <md-input-container class="md-block">
-              <label>About</label>
-              <textarea ng-model="$ctrl.user.about" md-maxlength="280" rows="5" md-select-on-focus></textarea>
-            </md-input-container>
-            <md-checkbox ng-model="$ctrl.user.terms"><a href="#"><label>I accept all the terms of service.</label></a></md-checkbox>
-            <div layout-margin layout="row" layout-align="center">
-              <md-button class="md-raised md-primary">Register</md-button>
-            </div>
-          </form>
-        </div>
+      <div ng-view layout-padding layout="column" layout-align-gt-xs="center center">
       </div>
     </div>
   </div>
